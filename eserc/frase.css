@@ -1,0 +1,45 @@
+body{
+    font-family: "Arial", sans-serif;
+    font-size: 26px;
+}
+.contenitore {
+    border: 1px solid #000;
+    padding: 20px;
+    width: 500px;
+    margin: 30px;
+}
+
+#testoAlternato p {
+    position: relative;
+}
+
+.parole i {
+    position: absolute;
+}
+.parola-nascosta {
+    display: none;
+}
+
+
+@keyframes fadeUpAndDown {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.parola-attiva {
+    display: inline-block;
+    animation: fadeUpAndDown 3s linear infinite 2s;
+    color: blue; 
+}
+.parola-attiva:nth-child(2) {
+    animation-delay: 3s
+}
+
+.parola-attiva:nth-child(3) {
+    animation-delay: 6s
+}
