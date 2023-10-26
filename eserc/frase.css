@@ -22,24 +22,35 @@ body{
 
 
 @keyframes fadeUpAndDown {
-    0%, 100% {
+    0%{
         opacity: 0;
         transform: translateY(-20px);
     }
-    50% {
+    20% {
         opacity: 1;
         transform: translateY(0);
+    }
+    70% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+     100% {
+        opacity: 0;
+        transform: translateY(-20px);
     }
 }
 .parola-attiva {
     display: inline-block;
-    animation: fadeUpAndDown 3s linear infinite 2s;
+    animation: fadeUpAndDown 6s linear infinite  backwards;
     color: blue; 
+    
 }
 .parola-attiva:nth-child(2) {
-    animation-delay: 3s
+
+    animation-delay: 2s;
 }
 
 .parola-attiva:nth-child(3) {
-    animation-delay: 6s
+
+    animation-delay: 4s;
 }
