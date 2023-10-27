@@ -1,13 +1,32 @@
 body{
-    font-family: "Arial", sans-serif;
-    font-size: 26px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    font-weight: 400;;
+    display: flex;
+    height: 1000px;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
 }
+
+
+
 .contenitore {
     border: 1px solid #000;
     padding: 20px;
     width: 500px;
     margin: 30px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgb(0 0 0 / 20%) -20px 7px 15px 13px, rgba(0, 0, 0, 0.2) -8px -11px 20px 0px inset;
+    background-color: lightgreen;
 }
+
+
+    
+
 
 #testoAlternato p {
     position: relative;
@@ -16,33 +35,25 @@ body{
 .parole i {
     position: absolute;
 }
-.parola-nascosta {
-    display: none;
-}
+
 
 
 @keyframes fadeUpAndDown {
-    0%{
+    
+    0%, 100% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(10px);
     }
-    20% {
+    10%, 40% {
         opacity: 1;
         transform: translateY(0);
-    }
-    70% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-     100% {
-        opacity: 0;
-        transform: translateY(-20px);
     }
 }
 .parola-attiva {
+    opacity: 0;
     display: inline-block;
     animation: fadeUpAndDown 6s linear infinite  backwards;
-    color: blue; 
+    color:slategrey
     
 }
 .parola-attiva:nth-child(2) {
@@ -53,4 +64,7 @@ body{
 .parola-attiva:nth-child(3) {
 
     animation-delay: 4s;
+}
+span {
+    padding-left: 5px;
 }
